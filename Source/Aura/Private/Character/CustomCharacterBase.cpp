@@ -13,6 +13,11 @@ ACustomCharacterBase::ACustomCharacterBase()
 	Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
+UAbilitySystemComponent* ACustomCharacterBase::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComponent;
+}
+
 void ACustomCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
