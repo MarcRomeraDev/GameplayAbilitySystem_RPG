@@ -14,7 +14,6 @@ ACustomPlayerState::ACustomPlayerState()
 	AbilitySystemComponent = CreateDefaultSubobject<UCustomAbilitySystemComponent>("Ability System Component");
 	AbilitySystemComponent->SetIsReplicated(true);
 	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
-	
 
 	AttributeSet = CreateDefaultSubobject<UCustomAttributeSet>("Attribute Set");
 }

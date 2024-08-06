@@ -1,8 +1,6 @@
 // Copyright Romera
 
-
 #include "AbilitySystem/CustomAttributeSet.h"
-#include "AbilitySystemComponent.h"
 #include "Net/UnrealNetwork.h"
 
 #define DECLARE_NOTIFY_GAMEPLAY_ATTRIBUTE(Attribute)\
@@ -11,6 +9,10 @@ void UCustomAttributeSet::OnRep_##Attribute(const FGameplayAttributeData& Old##A
 
 UCustomAttributeSet::UCustomAttributeSet()
 {
+	InitHealth(100.f);
+	InitMaxHealth(100.f);
+	InitMana(50.f);
+	InitMaxMana(50.f);
 }
 
 void UCustomAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
